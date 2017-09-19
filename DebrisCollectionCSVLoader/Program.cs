@@ -16,8 +16,8 @@ namespace DebrisCollectionCSVLoader
                                .Select(line => DebrisHaulTicket.FromCsv(line))
                                .ToList();
 
-      for (int i = 0; i < values.Count - 1; i++)
-        Console.WriteLine("value: " + values[i].ToString());
+      foreach (var value in values)
+        Console.WriteLine(value);
 
       Console.ReadKey();
     }
